@@ -1,4 +1,4 @@
-const CACHE_NAME = 'pwa-calendar-v1';
+const CACHE_NAME = 'pwa-calendar-v1.1';
 const ASSETS = [
   './',
   './index.html',
