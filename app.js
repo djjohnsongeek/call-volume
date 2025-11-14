@@ -1,7 +1,7 @@
 // Calendar state
 let viewDate = new Date(); // current visible month
 const today = new Date();
-const highVolumeDays = [new Date(2025, 11, 25), new Date(2025, 11, 26), new Date(2025, 11, 24)]
+const highVolumeDays = [new Date(2025, 10, 25), new Date(2025, 10, 26), new Date(2025, 10, 24)]
 
 // Render calendar grid for the given viewDate
 function renderCalendar() {

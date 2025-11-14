@@ -112,7 +112,7 @@ button:active { transform: translateY(1px); }
 .cell.today {
   background: linear-gradient(180deg, var(--today-bg), #0b615b);
   border-color: whitesmoke;
-  border-width: 5px;
+  border-width: 3px;
 }
 
 .cell.today .date {
@@ -122,8 +122,8 @@ button:active { transform: translateY(1px); }
 
 .cell.high-volume {
   background: linear-gradient(180deg, #b91c1c, #7f1d1d);
-  border-color: #991b1b;
-  border-width: 5px;
+  border-color: whitesmoke;
+  border-width: 3px;
 }
 
 .note {
