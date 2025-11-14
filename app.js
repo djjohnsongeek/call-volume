@@ -1,6 +1,7 @@
 // Calendar state
 let viewDate = new Date(); // current visible month
 const today = new Date();
+const highVolumeDays = [new Date(2025, 11, 25), new Date(2025, 11, 26), new Date(2025, 11, 24)]
 
 // Render calendar grid for the given viewDate
 function renderCalendar() {
@@ -57,10 +58,20 @@ function renderCalendar() {
       today.getMonth() === month &&
       today.getDate() === dayNum;
 
+    const isHighVolumeDay = highVolumeDays.some(d =>
+      d.getFullYear() === year &&
+      d.getMonth() === month &&
+      d.getDate() === dayNum
+    );
+
     if (isToday) {
       cell.classList.add('today');
       cell.setAttribute('aria-current', 'date');
       cell.setAttribute('title', 'Today');
+    }
+    else if (isHighVolumeDay) {
+      cell.classList.add('high-volume');
+      cell.setAttribute('title', 'High Volume Day');
     }
 
     grid.appendChild(cell);
