@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover"
+  />
+  <title>PWA Calendar</title>
+
+  <!-- PWA meta -->
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#0f766e" />
+  <link rel="icon" href="icons/icon-192.png" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1 id="monthTitle">Calendar</h1>
+    <div class="nav">
+      <button id="prevBtn" aria-label="Previous month">←</button>
+      <button id="todayBtn" aria-label="Go to current month">Today</button>
+      <button id="nextBtn" aria-label="Next month">→</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="calendar">
+      <div class="weekdays">
+        <div>Sun</div>
+        <div>Mon</div>
+        <div>Tue</div>
+        <div>Wed</div>
+        <div>Thu</div>
+        <div>Fri</div>
+        <div>Sat</div>
+      </div>
+      <div id="grid" class="grid" role="grid" aria-label="Monthly calendar"></div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <button id="installBtn" hidden>Install</button>
+    <span class="note">Works offline after first load.</span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
